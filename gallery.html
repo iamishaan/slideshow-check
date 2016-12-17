@@ -1,0 +1,372 @@
+<!-- === BEGIN HEADER === -->
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <head>
+        <!-- Title -->
+        <title>Gallery</title>
+        <!-- Meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <!-- Favicon -->
+        <link href="favicon.ico" rel="shortcut icon">
+        <!-- Bootstrap Core CSS -->
+        <!--<link rel="stylesheet" href="photo/assets/css/bootstrap.css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="photo/assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="photo/assets/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="photo/assets/css/nexus.css" rel="stylesheet">
+        <link rel="stylesheet" href="photo/assets/css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="photo/assets/css/custom.css" rel="stylesheet"> -->
+        <!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- bootstrap magic -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <!-- bootstrap date picker -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.css" />
+        
+        <!-- theme custom -->
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- Custombox -->
+        <link rel="stylesheet" href="css/custombox.css" />
+        
+        <!-- Owl Carousel -->
+        <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+        <link rel="stylesheet" type="text/css" href="css/owl.theme.css" />
+        
+        <!-- REVOLUTION BANNER CSS SETTINGS -->
+        <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+        
+        <!-- fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css" />
+    
+        <style>
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+
+
+.slides {
+    padding: 0;
+    width: 699px;
+    height: 420px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 699px;
+    height: 420px;
+    display: block;
+    position: absolute;
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+  width: 100%;
+  bottom: 9px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+
+.nav-dots .nav-dot {
+  top: -5px;
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6
+input#img-7:checked ~ .nav-dots label#img-dot-7,
+input#img-8:checked ~ .nav-dots label#img-dot-8,
+input#img-9:checked ~ .nav-dots label#img-dot-9,
+input#img-10:checked ~ .nav-dots label#img-dot-10,
+input#img-11:checked ~ .nav-dots label#img-dot-11,
+input#img-12:checked ~ .nav-dots label#img-dot-12 {
+  background: rgba(0, 0, 0, 0.8);
+}
+</style>
+    </head>
+    <body>
+    <header>
+            
+            <div class="top-bar">
+                <div class="container">
+                    <div class="col-md-12">
+                        <ul class="top-socials">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        </ul>
+                        
+                        <div class="right pull-right">
+                            <span class="text"><i class="fa fa-map-marker"></i> 632014, Vellore , Tamil Nadu</span>
+                            <span class="text"><i class="fa fa-phone"></i> +918220408889</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="navbar navbar-default">
+                <div class="container container-fluid">
+                    <div class="col-md-12">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="index.html"><img src="images/logo.png" height="28px" width="170px" alt="" /></a>
+                        </div>
+                        
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            
+                            <ul class="nav navbar-nav navbar-right">
+                                <li ><a href="index-2.html">Home</a></li>
+                                <li class="active"><a href="Gallery.html">Gallery</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="contact.html">Contact Us</a></li> 
+                            <!--    <li><a  class="m-open sitter" href="#modal">Find A Sitter</a></li> -->
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div>
+                </div><!-- /.container-fluid -->
+            </nav>
+            <div style="height:170px;width:100%;opacity:0.7;background-color:#EEEEEE;">
+                <h1 style="padding:20px;align:center">Our <span class="color">Photo </span> Gallery</h1>
+                <p style="margin-left:20px;font-size:24px">Welcome to our beautiful portfolio and witness some of our <span class="color">flawless</span> designs.<br>Here are all of our beautiful <span class="color">planes.</span> Give them a look</p>
+            </div>
+             <div class="col-md-12 heading"  >
+            <h2>The </span> <span class="color">BLUE BIRD</span></h2>
+             </div>   
+             <div style="height:470px;width:900px;margin-top:90px;margin-left:200px;">
+             <ul class="slides">
+    <input type="radio" name="radio-btn" id="img-1" checked />
+    <li class="slide-container">
+        <div class="slide">
+            <img src="lafota/bb1.JPG" />
+        </div>
+        <div class="nav">
+            <label for="img-5" class="prev">&#x2039;</label>
+            <label for="img-2" class="next">&#x203a;</label>
+        </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-2" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="lafota/bb2.JPG" />
+        </div>
+        <div class="nav">
+            <label for="img-1" class="prev">&#x2039;</label>
+            <label for="img-3" class="next">&#x203a;</label>
+        </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-3" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="lafota/bb3.JPG" />
+        </div>
+        <div class="nav">
+            <label for="img-2" class="prev">&#x2039;</label>
+            <label for="img-4" class="next">&#x203a;</label>
+        </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-4" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="lafota/bb4.JPG" />
+        </div>
+        <div class="nav">
+            <label for="img-3" class="prev">&#x2039;</label>
+            <label for="img-5" class="next">&#x203a;</label>
+        </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-5" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="lafota/bb5.JPG" />
+        </div>
+        <div class="nav">
+            <label for="img-4" class="prev">&#x2039;</label>
+            <label for="img-1" class="next">&#x203a;</label>
+        </div>
+    </li>
+
+    <li class="nav-dots">
+      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+      <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+      <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+      <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+    </li>
+</ul></div>
+<div class="col-md-12 heading"  >
+    <h2>The <span class="color">CARVAO</span></h2>
+</div> 
+<div style="height:470px;width:900px;margin-top:90px;margin-left:200px;">
+             <ul class="slides">
+    <input type="radio" name="radio-btn" id="img-6" checked />
+    <li class="slide-container">
+        <div class="slide">
+            <img src="lafota/bb6.jpg" />
+        </div>
+        <div class="nav">
+            <label for="img-10" class="prev">&#x2039;</label>
+            <label for="img-7" class="next">&#x203a;</label>
+        </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-7" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="lafota/bb7.JPG" />
+        </div>
+        <div class="nav">
+            <label for="img-6" class="prev">&#x2039;</label>
+            <label for="img-8" class="next">&#x203a;</label>
+        </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-8" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="lafota/bb8.jpg" />
+        </div>
+        <div class="nav">
+            <label for="img-7" class="prev">&#x2039;</label>
+            <label for="img-9" class="next">&#x203a;</label>
+        </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-9" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="lafota/bb9.jpg" />
+        </div>
+        <div class="nav">
+            <label for="img-8" class="prev">&#x2039;</label>
+            <label for="img-10" class="next">&#x203a;</label>
+        </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-10" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="lafota/bb10.jpg" />
+        </div>
+        <div class="nav">
+            <label for="img-9" class="prev">&#x2039;</label>
+            <label for="img-6" class="next">&#x203a;</label>
+        </div>
+    </li>
+
+    <li class="nav-dots">
+      <label for="img-6" class="nav-dot" id="img-dot-1"></label>
+      <label for="img-7" class="nav-dot" id="img-dot-2"></label>
+      <label for="img-8" class="nav-dot" id="img-dot-3"></label>
+      <label for="img-9" class="nav-dot" id="img-dot-4"></label>
+      <label for="img-10" class="nav-dot" id="img-dot-5"></label>
+    </li>
+</ul></div>
+   
+            
+
+</body>
+</html>
